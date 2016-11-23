@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
+
     <button id="load"> Fetch! </button>
+
+  <!-- // adding pet form method is refering to http method. -->
+  <form action="https://petdibs.herokuapp.com/pets" method="POST">
+
+    <section>
+      <label for="name">Name:</label>
+      <input type="text" name="name"></input>
+    </section>
+
+    <section>
+      <label>Age:</label>
+      <input type="text" id="age" name="age"></input>
+    </section>
+
+    <button id="createPet" type="submit">Create Pet</button>
+
+  </form>
+
+
+
+
+
+
+
 
     <!-- Pet Profile pop-up -->
     <div id="profile">

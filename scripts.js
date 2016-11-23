@@ -65,23 +65,43 @@ $("#pets").on('click','a', function(event){
 });
 
 
-// make a new pet
+
  // url;
 
-var data = {
-  name: "BobCat_TRISH",
-  age: 50,
-  breed: "cat"
-};
+// make a new pet
+// var data = {
+//   name: "BobCat_TRISH5",
+//   age: 50,
+//   breed: "cat"
+// };
 
 var callback = function(){
   console.log("Success!!!!!!!!");
 };
 
-$.post(url, data, callback);
+// testing that pushing submit will do something.
+$('form').submit('click', function(e){
+  // By default, the form will attempt to do it's own local POST so we want to prevent that default behavior
+
+  e.preventDefault();
+  var url = $(this).attr("action"); //retrieve action
+  var formData = $(this).serialize();
+
+
+  $.post(url, formData, function(response){
+    $('#message').html('<p> Pet added! </p>');
+
+    // What do we get in the response?
+    console.log(response);
+  });
+});
+
+
 
 }); //ending of document.ready()
 
+// function(event){
+//   event.preventDefault();
 
 
 
