@@ -2,6 +2,9 @@
 // Which URL do we want to 'get'?
 
 $(document).ready(function(){
+
+
+  // var url = "https://petdibs.herokuapp.com/pets";
 // which url do we want to get?
   var url = 'https://petdibs.herokuapp.com/pets';
   var successCallback = function (response) {
@@ -62,6 +65,20 @@ $("#pets").on('click','a', function(event){
 });
 
 
+// make a new pet
+ // url;
+
+var data = {
+  name: "BobCat_TRISH",
+  age: 50,
+  breed: "cat"
+};
+
+var callback = function(){
+  console.log("Success!!!!!!!!");
+};
+
+$.post(url, data, callback);
 
 }); //ending of document.ready()
 
