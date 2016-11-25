@@ -22,7 +22,7 @@ $(document).ready(function(){
     $.get(url, successCallback);
   });
 
-
+//////////////////////////////
 
 // clicl on a pet, show more information on that pet.
 //click event, that will make an ajax get request for the specific pet, then show pet, by ID
